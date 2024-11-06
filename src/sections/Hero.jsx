@@ -11,7 +11,7 @@ import Cube from "../components/Cube.jsx";
 import Rings from "../components/Rings.jsx";
 import HeroCamera from "../components/HeroCamera.jsx";
 import Button from "../components/Button.jsx";
-import { Model } from "../components/Mini_robot.jsx";
+import { Model } from "../components/mini_robot.jsx";
 
 const Hero = () => {
     const isSmall =useMediaQuery({maxWidth:440});
