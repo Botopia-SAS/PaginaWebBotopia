@@ -137,9 +137,9 @@ export const myProjects = [
   },
   {
     title: 'Maquina Dispensadora',
-    desc: 'An innovative healthcare platform designed to streamline essential medical processes. It simplifies patient registration, appointment scheduling, and medical record management, providing a seamless experience for both healthcare providers and patients.',
+    desc: 'Diseño y simulación de una máquina dispensadora de jabones para entornos comerciales e industriales.',
     subdesc:
-      'With a focus on efficiency, CarePulse integrantes complex forms and SMS notifications, by using Next.js, Appwrite, Twillio and Sentry that enhance operational workflows.',
+      'Este proyecto comprende el diseño en SolidWorks de una máquina dispensadora de jabones líquidos y en espuma, enfocada en la durabilidad y facilidad de recarga para uso intensivo. La simulación permite evaluar la resistencia estructural y la eficiencia de sus mecanismos, ofreciendo un equipo confiable y práctico para ambientes de alto tráfico.',
     href: 'Botopia.tech',
     texture: '/textures/project/Solid.mp4',
     logo: '/assets/foto4.png',
