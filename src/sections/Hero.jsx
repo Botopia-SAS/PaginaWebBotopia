@@ -13,7 +13,7 @@ import { Model } from "../components/mini_robot.jsx";
 import { Astronauta } from "../components/Astronauta.jsx";
 
 const Hero = () => {
-    const isSmall = useMediaQuery({ maxWidth: 440 });
+    const isSmall = useMediaQuery({ maxWidth: 0 });
     const isMobile = useMediaQuery({ maxWidth: 768 });
     const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
 
