@@ -45,7 +45,7 @@ const Hero = () => {
                                 <Astronauta
                                     scale={sizes.deskScale}
                                     position={sizes.deskPosition}
-                                    rotation={[0.1, 0, 0]}
+                                    rotation={[0.3, 0.1, -0.5]}
                                 />
                             </HeroCamera>
 
