@@ -1,10 +1,20 @@
-import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import React, { useRef } from 'react';
+import { useGLTF } from '@react-three/drei';
+import { useFrame } from '@react-three/fiber'; // Cambia la importación a @react-three/fiber
 
 export function Astronauta(props) {
-  const { nodes, materials } = useGLTF('/models/Astronauta.glb')
+  const { nodes, materials } = useGLTF('/models/Astronauta.glb');
+  const groupRef = useRef();
+
+  // Utiliza `useFrame` para actualizar la rotación en cada frame
+  useFrame(() => {
+    if (groupRef.current) {
+      groupRef.current.rotation.y += 0.0005; // Ajusta la velocidad de rotación aquí
+    }
+  });
+
   return (
-    <group {...props} dispose={null}>
+    <group ref={groupRef} {...props} dispose={null}>
       <mesh
         castShadow
         receiveShadow
@@ -48,7 +58,7 @@ export function Astronauta(props) {
         material={materials.material_2}
       />
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/models/Astronauta.glb')
+useGLTF.preload('/models/Astronauta.glb');
