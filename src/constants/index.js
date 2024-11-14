@@ -217,11 +217,11 @@ export const myProjects = [
   
   export const calculateSizes = (isSmall, isMobile, isTablet) => {
     return {
-      deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
+      deskScale: isTablet ? 0.035:isSmall ? 1 :isMobile ? 0.03 : 0.035,
       deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -5.5, 0],
-      cubePosition: isSmall ? [4, -5, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
+      cubePosition: isSmall ? [4, 0, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
       reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [8, 3, 0],
-      ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-17, 5, 0],
+      ringPosition: isSmall ? [10, 10, 10] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 3, 0] : [-17, 5, 0],
       targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-5, -10, -10] : isTablet ? [-5, -7, -10] : [-8, -13, -10],
     };
   };
