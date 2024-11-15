@@ -7,9 +7,9 @@ import { Autoplay } from 'swiper/modules';  // Solo importar Autoplay
 const Customers = () => {
     const customers = [
         { id: 1, name: 'Coca Cola', logo: '/assets/customers/Coca-Cola_logo.svg' },
-        { id: 2, name: 'Customer 2', logo: '/assets/customer2.png' },
-        { id: 3, name: 'Customer 3', logo: '/assets/customer3.png' },
-        { id: 4, name: 'Customer 4', logo: '/assets/customer4.png' },
+        { id: 2, name: 'Customer 2', logo: '/assets/customers/GRUPO-LHOMKA-S.A.S.svg' },
+        { id: 3, name: 'Customer 3', logo: '/assets/customers/FreedOM_logo.svg' },
+        { id: 4, name: 'Customer 4', logo: '/assets/customers/Grupo-industrial-de-proyectos.svg' },
         { id: 5, name: 'Customer 5', logo: '/assets/customer5.png' },
         // Agrega más clientes según lo necesites
     ];

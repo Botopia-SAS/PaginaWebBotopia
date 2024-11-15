@@ -78,12 +78,7 @@ export const myProjects = [
       {
         id: 1,
         name: 'Siemens',
-        path: '/assets/Siemens.png',
-      },
-      {
-        id: 2,
-        name: 'PLC',
-        path: 'assets/PLC.png',
+        path: '/assets/tools/siemens_logo.svg',
       },
       {
         id: 3,
@@ -119,7 +114,7 @@ export const myProjects = [
       {
         id: 2,
         name: 'Flutter',
-        path: 'assets/Flutter.png',
+        path: 'assets/flutter-logo.svg',
       },
       {
         id: 3,
@@ -139,11 +134,11 @@ export const myProjects = [
     subdesc:
       'Este proyecto comprende el diseño en SolidWorks de una máquina dispensadora de jabones líquidos y en espuma, enfocada en la durabilidad y facilidad de recarga para uso intensivo. La simulación permite evaluar la resistencia estructural y la eficiencia de sus mecanismos, ofreciendo un equipo confiable y práctico para ambientes de alto tráfico.',
     texture: '/textures/project/Solid.mp4',
-    logo: '/assets/foto4.png',
+    logo: '/assets/customers/GRUPO-LHOMKA-S.A.S.svg',
     logoStyle: {
-      backgroundColor: '#60f5a1',
+      backgroundColor: '#000000',
       background:
-        'linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
+        'linear-gradient(0deg, #000000, #000000), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
       border: '0.2px solid rgba(208, 213, 221, 1)',
       boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
     },
@@ -157,7 +152,7 @@ export const myProjects = [
       {
         id: 2,
         name: 'Flutter',
-        path: 'assets/Flutter.png',
+        path: 'assets/flutter-logo.svg',
       },
       {
         id: 3,
@@ -172,15 +167,14 @@ export const myProjects = [
     ],
   },
   {
-    title: 'Coinly',
-    desc: 'Gestión Financiera y Recomendaciones de Inversión en un Solo Lugar.',
+    title: 'FreedOM',
     subdesc:
-      'Coinly es una aplicación innovadora que permite a los usuarios centralizar todas sus cuentas bancarias en un solo lugar, ofreciendo una visión completa y detallada de sus movimientos financieros. Además, Coinly analiza las tendencias del mercado de valores y proporciona recomendaciones de inversión personalizadas, ayudando a los usuarios a tomar decisiones informadas y a maximizar sus oportunidades de crecimiento financiero.',
+      'FreedOM es una app que tiene como misión transformar la vida financiera de las personas generando un impacto mental y emociona por medio de la centralización, organización y administración de toda la información financiera de una persona en un solo lugar',
     href: 'https://banking-iota-nine.vercel.app/sign-in',
     texture: '/textures/project/Coinlym.mp4',
-    logo: '/assets/Coinly.png',
+    logo: '/assets/customers/freedom_solo_logo.svg',
     logoStyle: {
-      backgroundColor: '#0E1F38',
+      backgroundColor: '#000000',
       border: '0.2px solid #0E2D58',
       boxShadow: '0px 0px 60px 0px #2F67B64D',
     },
@@ -194,7 +188,7 @@ export const myProjects = [
       {
         id: 2,
         name: 'Flutter',
-        path: 'assets/Flutter.png',
+        path: 'assets/flutter-logo.svg',
       },
       {
         id: 3,
