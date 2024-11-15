@@ -25,7 +25,7 @@ const About = () => {
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
           <div className="overflow-hidden" style={{ borderRadius: '20px' }}>
-           <img src="assets/grid1.png" alt="grid1" className="w-full sm:h-[276px] h-fit object-contain" />
+           <img src="assets/grid1.png" alt="grid1" className="w-full sm:h-[276px] md:h-[240px] h-auto object-contain" />
           </div>
 
             <div>

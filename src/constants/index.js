@@ -66,9 +66,8 @@ export const myProjects = [
     desc: 'Automatización de Planta de Retrolavado en Coca-Cola FEMSA.',
     subdesc:
       'Este proyecto automatizó la planta de retrolavado en Coca-Cola FEMSA mediante PLCs, optimizando el proceso y mejorando la eficiencia. También se desarrolló una interfaz HMI personalizada para facilitar el monitoreo y control en tiempo real.',
-    href: 'Botopia.tech',
     texture: '/textures/project/Coca.mp4',
-    logo: './assets/logoco.png',
+    logo: './assets/customers/Coca-Cola_logo.svg',
     logoStyle: {
       backgroundColor: '#2A1816',
       border: '0.2px solid #36201D',
@@ -103,7 +102,6 @@ export const myProjects = [
     desc: 'Vohgo - Plataforma de Compra Rápida de Componentes Eléctricos.',
     subdesc:
       'Vohgo es una aplicación para Android y iOS que facilita la compra rápida y conveniente de componentes eléctricos. Con una interfaz intuitiva y entregas en tiempo récord, ofrece a los usuarios una solución confiable para acceder a piezas de calidad en cualquier momento.',
-    href: 'Botopia.tech',
     texture: '/textures/project/Vohgo.mp4',
     logo: '/assets/Voh.png',
     logoStyle: {
@@ -140,7 +138,6 @@ export const myProjects = [
     desc: 'Diseño y simulación de una máquina dispensadora de jabones para entornos comerciales e industriales.',
     subdesc:
       'Este proyecto comprende el diseño en SolidWorks de una máquina dispensadora de jabones líquidos y en espuma, enfocada en la durabilidad y facilidad de recarga para uso intensivo. La simulación permite evaluar la resistencia estructural y la eficiencia de sus mecanismos, ofreciendo un equipo confiable y práctico para ambientes de alto tráfico.',
-    href: 'Botopia.tech',
     texture: '/textures/project/Solid.mp4',
     logo: '/assets/foto4.png',
     logoStyle: {
