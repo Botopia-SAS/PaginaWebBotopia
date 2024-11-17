@@ -1,26 +1,62 @@
 export const navLinks = [
-    {
-      id: 1,
-      name: 'Inicio',
-      href: '#home',
-    },
-    {
-      id: 2,
-      name: 'Conócenos',
-      href: '#about',
-    },
-    {
-      id: 3,
-      name: 'Portafolio',
-      href: '#work',
-    },
-    {
-      id: 4,
-      name: 'Contacto',
-      href: '#contact',
-    },
-  ];
-  
+  {
+    id: "home",
+    name: "Inicio",
+    href: "#home",
+  },
+  {
+    id: "about",
+    name: "Conócenos",
+    href: "#about",
+  },
+  {
+    id: "work",
+    name: "Portafolio",
+    href: "#work",
+  },
+  {
+    id: "services",
+    name: "Servicios",
+    href:"#services",
+    submenu: [
+      {
+        id: "consultoria",
+        name: "Soluciones de ingeniería",
+        services: [
+          "Automatización",
+          "Innovación y Transformación Digital",
+          "Robots",
+          "Consultoría de Negocios",
+        ],
+      },
+      {
+        id: "tecnologia",
+        name: "Softwares",
+        services: [
+          "Tecnología a la Medida",
+          "Desarrollo de Sitio Web",
+          "Desarrollo de Aplicaciones Móviles",
+          "Infraestructura Cloud",
+          "Desarrollo MVP",
+          "Desarrollo E-commerce",
+          "Integración AI",
+        ],
+      },
+      {
+        id: "diseño",
+        name: "Diseño",
+        services: ["Diseño UX/UI", "Branding & Naming"],
+      },
+    ],
+  },
+  {
+    id: "contact",
+    name: "Contacto",
+    href: "#contact",
+  },
+];
+
+
   export const clientReviews = [
     {
       id: 1,

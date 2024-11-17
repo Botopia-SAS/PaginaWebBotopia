@@ -3,6 +3,15 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}', './src/App.jsx'],
   theme: {
     extend: {
+      screens: {
+        'xs': '480px', // Por si usas pantallas muy pequeñas
+      },
+      spacing: {
+        'screen': '100vw', // Asegura que las clases `w-screen` ocupen el 100% del ancho de la ventana
+      },
+    },
+    
+    extend: {
       fontFamily: {
         generalsans: ['General Sans', 'sans-serif'],
       },
