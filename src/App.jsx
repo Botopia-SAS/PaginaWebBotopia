@@ -39,10 +39,6 @@ const App = () => {
         <Projects />
       </section>
 
-      {/* Contact Section */}
-      <section id="contact">
-        <Contact />
-      </section>
 
       {/* Footer */}
       <Footer />
