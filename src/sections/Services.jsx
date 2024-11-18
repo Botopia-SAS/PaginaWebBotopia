@@ -123,7 +123,8 @@ const Services = () => {
 
   const handleScroll = (direction) => {
     const container = document.getElementById("services-container");
-    const scrollAmount = direction === "left" ? -300 : 300;
+    const cardWidth = container.querySelector("div").offsetWidth + 16; // Calcula el ancho de cada tarjeta
+    const scrollAmount = direction === "left" ? -cardWidth : cardWidth;
     container.scrollBy({ left: scrollAmount, behavior: "smooth" });
   };
 
@@ -165,13 +166,13 @@ const Services = () => {
           <div
             id="services-container"
             className={`flex ${
-              shouldCenter ? "justify-center" : "overflow-x-hidden"
-            } gap-4 py-4`}
+              shouldCenter ? "justify-center" : "overflow-x-auto"
+            } gap-4 py-4 scroll-snap-x`}
           >
-            {servicesData[selectedCategory].map((service, index) => (
+            {servicesData[selectedCategory].map((service) => (
               <div
                 key={service.id}
-                className="min-w-[220px] max-w-[220px] bg-[#1A1A1A] p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105 flex-shrink-0 h-[250px]"
+                className="min-w-[220px] max-w-[220px] bg-[#1A1A1A] p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105 flex-shrink-0 h-[250px] scroll-snap-center"
               >
                 <h3 className="text-base font-semibold mb-2 text-center text-white">
                   {service.title}
