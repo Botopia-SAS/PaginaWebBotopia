@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const [selectedCategory, setSelectedCategory] = useState(
@@ -167,12 +168,12 @@ const Services = () => {
             id="services-container"
             className={`flex ${
               shouldCenter ? "justify-center" : "overflow-x-auto"
-            } gap-4 py-4 scroll-snap-x`}
+            } gap-4 py-4`}
           >
             {servicesData[selectedCategory].map((service) => (
               <div
                 key={service.id}
-                className="min-w-[220px] max-w-[220px] bg-[#1A1A1A] p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105 flex-shrink-0 h-[250px] scroll-snap-center"
+                className="min-w-[220px] max-w-[220px] bg-[#1A1A1A] p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105 flex-shrink-0 h-[250px]"
               >
                 <h3 className="text-base font-semibold mb-2 text-center text-white">
                   {service.title}
@@ -181,12 +182,13 @@ const Services = () => {
                   {service.description}
                 </p>
                 <div className="flex justify-center mt-4">
-                  <a
-                    href={`#${service.id}`}
+                  {/* Enlace dinámico */}
+                  <Link
+                    to={`/servicio/${service.id}`}
                     className="bg-[#9165f3] text-white px-4 py-2 rounded-full text-sm hover:bg-[#7e53c1] transition"
                   >
                     Ver más
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}

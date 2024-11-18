@@ -1,12 +1,13 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Projects from "./sections/Projects";
-import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
 import Customers from "./sections/Customers";
 import Services from "./sections/Services";
+import ServiceDetail from "./sections/ServiceDetail";
 
 const App = () => {
   return (
@@ -14,31 +15,39 @@ const App = () => {
       {/* Navbar */}
       <Navbar />
 
-      {/* Hero Section */}
-      <section id="home">
-        <Hero />
-      </section>
+      {/* Rutas de la aplicación */}
+      <Routes>
+        {/* Página principal */}
+        <Route
+          path="/"
+          element={
+            <>
+              <section id="home">
+                <Hero />
+              </section>
 
-      {/* Customers Section */}
-      <section id="customers">
-        <Customers />
-      </section>
+              <section id="customers">
+                <Customers />
+              </section>
 
-      {/* About Section */}
-      <section id="about">
-        <About />
-      </section>
+              <section id="about">
+                <About />
+              </section>
 
-      {/* Services Section */}
-      <section id="services">
-        <Services />
-      </section>
+              <section id="services">
+                <Services />
+              </section>
 
-      {/* Projects Section */}
-      <section id="work">
-        <Projects />
-      </section>
+              <section id="work">
+                <Projects />
+              </section>
+            </>
+          }
+        />
 
+        {/* Ruta dinámica para los detalles del servicio */}
+        <Route path="/servicio/:id" element={<ServiceDetail />} />
+      </Routes>
 
       {/* Footer */}
       <Footer />
