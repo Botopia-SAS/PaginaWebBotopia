@@ -18,7 +18,7 @@ const NavItems = ({ onMouseEnter, onMouseLeave, openMenu, handleScroll }) => {
               e.preventDefault();
               handleScroll(href);
             }}
-            className={`font-medium hover:text-[#7e53c1] transition-colors cursor-pointer ${
+            className={`text-white font-medium hover:text-[#7e53c1] transition-colors cursor-pointer text-lg ${
               id === "contact" ? "text-white" : "text-neutral-400"
             }`}
           >
@@ -94,7 +94,7 @@ const Navbar = () => {
               e.preventDefault();
               handleScroll("#home");
             }}
-            className="text-neutral-400 font-bold text-xl hover:text-[#9165f3] transition-colors"
+            className="text-white font-bold text-2xl hover:text-[#9165f3] transition-colors"
           >
             Botopia
           </a>

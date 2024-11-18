@@ -3,38 +3,12 @@ import { Link } from "react-router-dom";
 
 const Services = () => {
   const [selectedCategory, setSelectedCategory] = useState(
-    "Soluciones de Ingeniería"
+    "Software a la Medida"
   );
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   const servicesData = {
-    "Soluciones de Ingeniería": [
-      {
-        id: "automatizacion",
-        title: "Automatización",
-        description:
-          "Automatizamos procesos en tu empresa para hacerlos más eficaces, eficientes y competitivos.",
-      },
-      {
-        id: "transformacion-digital",
-        title: "Innovación y Transformación Digital",
-        description:
-          "Implementamos tecnologías avanzadas para transformar digitalmente tu negocio.",
-      },
-      {
-        id: "robots",
-        title: "Robots",
-        description:
-          "Diseñamos e implementamos soluciones robóticas para optimizar tus operaciones.",
-      },
-      {
-        id: "consultoria-negocios",
-        title: "Consultoría de Negocios",
-        description:
-          "Te ayudamos a identificar oportunidades y estrategias para maximizar el éxito de tu empresa.",
-      },
-    ],
-    "Softwares Personalizados": [
+    "Software a la Medida": [
       {
         id: "tecnologia-medida",
         title: "Tecnología a la Medida",
@@ -74,6 +48,32 @@ const Services = () => {
         title: "Integración AI",
         description:
           "Llevamos tus aplicaciones al siguiente nivel con inteligencia artificial personalizada.",
+      },
+    ],
+    "Soluciones de Ingeniería": [
+      {
+        id: "automatizacion",
+        title: "Automatización",
+        description:
+          "Automatizamos procesos en tu empresa para hacerlos más eficaces, eficientes y competitivos.",
+      },
+      {
+        id: "transformacion-digital",
+        title: "Innovación y Transformación Digital",
+        description:
+          "Implementamos tecnologías avanzadas para transformar digitalmente tu negocio.",
+      },
+      {
+        id: "robots",
+        title: "Robots",
+        description:
+          "Diseñamos e implementamos soluciones robóticas para optimizar tus operaciones.",
+      },
+      {
+        id: "consultoria-negocios",
+        title: "Consultoría de Negocios",
+        description:
+          "Te ayudamos a identificar oportunidades y estrategias para maximizar el éxito de tu empresa.",
       },
     ],
     Diseño: [
@@ -153,11 +153,10 @@ const Services = () => {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-lg transition ${
-                selectedCategory === category
+              className={`px-4 py-2 rounded-lg transition ${selectedCategory === category
                   ? "bg-[#9165f3] text-white"
                   : "bg-gray-800 text-gray-400"
-              } hover:bg-[#7e53c1] hover:text-white`}
+                } hover:bg-[#7e53c1] hover:text-white`}
             >
               {category}
             </button>
@@ -166,9 +165,8 @@ const Services = () => {
         <div className="relative">
           <div
             id="services-container"
-            className={`flex ${
-              shouldCenter ? "justify-center" : "overflow-x-auto"
-            } gap-4 py-4`}
+            className={`flex ${shouldCenter ? "justify-center" : "overflow-x-auto"
+              } gap-4 py-4`}
           >
             {servicesData[selectedCategory].map((service) => (
               <div
