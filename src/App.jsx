@@ -2,13 +2,14 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
-//import About from "./sections/About";
+// import About from "./sections/About";
 import Projects from "./sections/Projects";
 import Footer from "./sections/Footer";
 import Customers from "./sections/Customers";
 import Services from "./sections/Services";
 import ServiceDetail from "./sections/ServiceDetail";
-import Contact from "./sections/Contact"; //
+import Contact from "./sections/Contact";
+import WhatsAppButton from "./sections/WhatsAppButton"; // Importamos el botón de WhatsApp
 
 const App = () => {
   return (
@@ -53,6 +54,9 @@ const App = () => {
 
       {/* Footer */}
       <Footer />
+
+      {/* Botón flotante de WhatsApp */}
+      <WhatsAppButton />
     </main>
   );
 };
