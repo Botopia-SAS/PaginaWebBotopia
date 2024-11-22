@@ -1,26 +1,53 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const WhatsAppButton = () => {
-  const whatsappLink = "https://wa.me/573228726267"; // Tu número de WhatsApp en formato internacional
+const WhatsAppButton = ({
+  phoneNumber = "573228726267", // Número por defecto
+  message = "¡Hola! Me gustaría más información.", // Mensaje por defecto
+  size = 56, // Tamaño del botón por defecto
+  iconSize = 32, // Tamaño del ícono
+  backgroundColor = "linear-gradient(135deg, #7A5FFF, #9B72FF)", // Gradiente morado
+  boxShadow = "0 4px 15px rgba(0, 0, 0, 0.3)", // Sombra por defecto
+  position = { bottom: "24px", right: "24px" }, // Posición flotante
+}) => {
+  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
     <a
       href={whatsappLink}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition duration-300 animate-bounce z-50"
+      className="fixed flex items-center justify-center rounded-full z-50 animate-bounce" // Añadido efecto de rebote con Tailwind
+      style={{
+        width: size,
+        height: size,
+        background: backgroundColor,
+        boxShadow: boxShadow,
+        ...position, // Posición flotante configurable
+      }}
       aria-label="Chat on WhatsApp"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        className="w-7 h-7"
+        viewBox="0 0 48 48"
+        fill="white"
+        style={{ width: iconSize, height: iconSize }}
       >
-        <path d="M12 2C6.477 2 2 6.477 2 12c0 2.116.666 4.075 1.8 5.695L2 22l4.468-1.784A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm5.534 14.065c-.228.643-1.331 1.24-1.84 1.318-.471.073-1.06.104-1.7-.175a12.303 12.303 0 01-2.763-1.65 11.975 11.975 0 01-2.253-2.07c-.559-.678-1.006-1.433-1.302-2.145-.296-.71-.025-1.09.09-1.223.228-.268.468-.54.696-.81.223-.265.456-.324.686-.324.169 0 .336.001.482.01.155.01.365-.06.564.433.214.524.726 1.794.794 1.926.07.132.07.287.006.419a2.352 2.352 0 01-.375.5c-.191.208-.372.367-.562.572-.1.11-.206.228-.3.342-.097.119-.197.248-.06.49.133.235.597.975 1.277 1.581.883.768 1.631 1.007 1.866 1.118.235.111.372.1.502-.056.133-.157.572-.66.727-.884.152-.222.305-.179.514-.107.208.072 1.312.624 1.54.735.227.112.38.168.438.26.057.092.057.54-.171 1.183z" />
+        <path d="M4.5 20c0-8.56 7.44-15.5 16.5-15.5S37.5 11.44 37.5 20 30.06 35.5 21 35.5c-2.44 0-4.56-.56-6.56-1.5L7.5 37.5l2.5-7.06c-2.06-2.5-5.5-6.06-5.5-10.44zm21.56 9.5c-.5-.44-2-1.31-3.13-1.75-1.13-.44-2-.19-2.63.25-.63.44-1 1.12-1.94 1-.94-.12-2.62-1.19-3.69-2.19-.5-.5-.94-1-.81-1.44.12-.44.56-1.44 1-1.88.44-.44.63-.56.94-.94.31-.38.19-.63-.19-.94-.37-.31-.44-.5-.81-.94-.38-.44-1.12-1.44-1.12-2.25s.31-1.56.63-1.88c.5-.62 1.13-.94 1.69-.94h.19c.25 0 .5 0 .63.06.13.06.38.13.5.5.12.37.62 1.87.75 2.19.13.31.25.37.5.25s.69-.37 1.12-.62c.44-.25.88-.06 1.12.06.25.12 1.75 1.25 1.94 1.5.19.25.19.44.13.62-.06.19-.19.31-.38.5-.19.19-.5.44-.75.69-.25.25-.44.38-.06.88.37.5 1.25 1.19 1.88 1.56.63.37 1.19.63 1.56.31s.75-.88 1.12-1.31.5-.44.94-.25c.44.19 2.5 1.25 2.94 1.44.44.19.75.25.87.44.12.19.12 1.12-.25 1.69-.37.56-1.5 2-1.87 2.5-.37.5-.75.62-1.31.62-.56-.01-1.68-.32-2.25-.81z" />
       </svg>
     </a>
   );
+};
+
+// Validación de propiedades con PropTypes
+WhatsAppButton.propTypes = {
+  phoneNumber: PropTypes.string.isRequired, // Número de WhatsApp
+  message: PropTypes.string, // Mensaje inicial
+  size: PropTypes.number, // Tamaño del botón
+  iconSize: PropTypes.number, // Tamaño del ícono
+  backgroundColor: PropTypes.string, // Color o gradiente de fondo
+  boxShadow: PropTypes.string, // Estilo de la sombra
+  position: PropTypes.object, // Posición flotante del botón
 };
 
 export default WhatsAppButton;
