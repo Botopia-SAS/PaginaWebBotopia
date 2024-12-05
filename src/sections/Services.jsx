@@ -133,83 +133,79 @@ const Services = () => {
     servicesData[selectedCategory].length <= 4 && !isSmallScreen;
 
   return (
-    <section
-      id="services"
-      className="relative py-16"
-      style={{
-        backgroundColor: "black",
-        backgroundImage: `url('assets/spotlight5.png')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        color: "white",
-      }}
-    >
-      <div className="relative z-10 max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-white">
-          Nuestros Servicios
-        </h2>
-        <div className="flex justify-center mb-8 flex-wrap gap-4">
-          {Object.keys(servicesData).map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-lg transition ${selectedCategory === category
-                  ? "bg-[#9165f3] text-white"
-                  : "bg-gray-800 text-gray-400"
-                } hover:bg-[#7e53c1] hover:text-white`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-        <div className="relative">
+<section
+  id="services"
+  className="relative py-16 bg-galaxy bg-cover bg-fixed text-white"
+>
+  <div className="relative z-10 max-w-7xl mx-auto px-4">
+    <h2 className="text-4xl font-bold text-center mb-12">
+      Nuestros Servicios
+    </h2>
+    <div className="flex justify-center mb-8 flex-wrap gap-4">
+      {Object.keys(servicesData).map((category) => (
+        <button
+          key={category}
+          onClick={() => setSelectedCategory(category)}
+          className={`px-4 py-2 rounded-lg transition ${
+            selectedCategory === category
+              ? "bg-[#9165f3] text-white"
+              : "bg-gray-800 text-gray-400"
+          } hover:bg-[#7e53c1] hover:text-white`}
+        >
+          {category}
+        </button>
+      ))}
+    </div>
+    <div className="relative">
+      <div
+        id="services-container"
+        className={`flex ${
+          shouldCenter ? "justify-center" : "overflow-x-auto"
+        } gap-4 py-4`}
+      >
+        {servicesData[selectedCategory].map((service) => (
           <div
-            id="services-container"
-            className={`flex ${shouldCenter ? "justify-center" : "overflow-x-auto"
-              } gap-4 py-4`}
+            key={service.id}
+            className="min-w-[220px] max-w-[220px] bg-[#1A1A1A] p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105 flex-shrink-0 h-[250px]"
           >
-            {servicesData[selectedCategory].map((service) => (
-              <div
-                key={service.id}
-                className="min-w-[220px] max-w-[220px] bg-[#1A1A1A] p-4 rounded-lg shadow-lg hover:shadow-xl transition hover:scale-105 flex-shrink-0 h-[250px]"
+            <h3 className="text-base font-semibold mb-2 text-center">
+              {service.title}
+            </h3>
+            <p className="text-sm text-gray-400 text-center break-words">
+              {service.description}
+            </p>
+            <div className="flex justify-center mt-4">
+              {/* Enlace dinámico */}
+              <Link
+                to={`/servicio/${service.id}`}
+                className="bg-[#9165f3] text-white px-4 py-2 rounded-full text-sm hover:bg-[#7e53c1] transition"
               >
-                <h3 className="text-base font-semibold mb-2 text-center text-white">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-gray-400 text-center break-words">
-                  {service.description}
-                </p>
-                <div className="flex justify-center mt-4">
-                  {/* Enlace dinámico */}
-                  <Link
-                    to={`/servicio/${service.id}`}
-                    className="bg-[#9165f3] text-white px-4 py-2 rounded-full text-sm hover:bg-[#7e53c1] transition"
-                  >
-                    Ver más
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-          {!shouldCenter && (
-            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex items-center gap-4">
-              <button
-                className="text-[#9165f3] text-3xl hover:text-[#7e53c1] transition"
-                onClick={() => handleScroll("left")}
-              >
-                &#8249;
-              </button>
-              <button
-                className="text-[#9165f3] text-3xl hover:text-[#7e53c1] transition"
-                onClick={() => handleScroll("right")}
-              >
-                &#8250;
-              </button>
+                Ver más
+              </Link>
             </div>
-          )}
-        </div>
+          </div>
+        ))}
       </div>
-    </section>
+      {!shouldCenter && (
+        <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex items-center gap-4">
+          <button
+            className="text-[#9165f3] text-3xl hover:text-[#7e53c1] transition"
+            onClick={() => handleScroll("left")}
+          >
+            &#8249;
+          </button>
+          <button
+            className="text-[#9165f3] text-3xl hover:text-[#7e53c1] transition"
+            onClick={() => handleScroll("right")}
+          >
+            &#8250;
+          </button>
+        </div>
+      )}
+    </div>
+  </div>
+</section>
+
   );
 };
 
