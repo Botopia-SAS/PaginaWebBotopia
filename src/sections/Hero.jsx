@@ -21,74 +21,68 @@ const Hero = () => {
     const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
     return (
-<section
-    className="max-w-screen h-screen flex flex-col relative"
-    style={{
-        backgroundImage: `url('/assets/Galaxia.jpg')`, // Ruta de la imagen de galaxia
-
-        
-        backgroundRepeat: 'repeat', // Evita que la imagen se repita
-    }}
->
-    <div className="w-full flex flex-col sm:mt-36 mt-20 px-10 gap-3">
-        <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">
-            ¡Hola! somos Botopia
-            <span className="waving hand">👋</span>
-        </p>
-        <div>
-            <p className="hero_tag text-gray_gradient text-[32px]">
-                <Typewriter
-                    words={[
-                        'Tecnología que mejora tu vida',
-                        'Creamos soluciones innovadoras',
-                        'Impulsamos tu negocio con tecnología',
-                    ]}
-                    loop={0} // Número de repeticiones, '0' para infinito
-                    cursor
-                    cursorStyle="|"
-                    cursorColor="white"
-                    typeSpeed={50} // Velocidad de escritura
-                    deleteSpeed={5} // Velocidad de borrado
-                    delaySpeed={4000} // Pausa antes de cambiar al siguiente texto
-                />
-            </p>
-        </div>
-        <div style={{ height: '4rem' }}></div> {/* Espacio adicional */}
-        <div className="w-full h-full absolute inset-0">
-            <Canvas className="w-full h-full">
-                <Suspense fallback={''}>
-                    <PerspectiveCamera makeDefault position={[0, 0, 20]} />
-                    <HeroCamera isMobile={isMobile}>
-                        <Astronauta
-                            scale={sizes.deskScale}
-                            position={sizes.deskPosition}
-                            rotation={[0.3, 0.1, -0.5]}
+        <section
+            id="hero"
+            className="h-screen bg-galaxy bg-cover bg-fixed flex flex-col relative"
+        >
+            <div className="w-full flex flex-col sm:mt-36 mt-20 px-10 gap-3">
+                <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans">
+                    ¡Hola! somos Botopia
+                    <span className="waving hand">👋</span>
+                </p>
+                <div>
+                    <p className="hero_tag text-gray_gradient text-[32px]">
+                        <Typewriter
+                            words={[
+                                'Tecnología que mejora tu vida',
+                                'Creamos soluciones innovadoras',
+                                'Impulsamos tu negocio con tecnología',
+                            ]}
+                            loop={0} // Número de repeticiones, '0' para infinito
+                            cursor
+                            cursorStyle="|"
+                            cursorColor="white"
+                            typeSpeed={50} // Velocidad de escritura
+                            deleteSpeed={5} // Velocidad de borrado
+                            delaySpeed={4000} // Pausa antes de cambiar al siguiente texto
                         />
-                    </HeroCamera>
-                    <group>
-                        <Model position={sizes.targetPosition} />
-                        <ReactLogo position={sizes.reactLogoPosition} />
-                        <Rings position={sizes.ringPosition} />
-                        <Cube position={sizes.cubePosition} />
-                    </group>
-                    <ambientLight intensity={1} />
-                    <directionalLight position={[5, 5, 5]} intensity={1} castShadow />
-                    <directionalLight position={[-5, -5, 5]} intensity={0.5} />
-                </Suspense>
-            </Canvas>
-        </div>
-        <div className="absolute bottom-7 left-0 right-0 w-full z-10 px-4">
-            <a href="#contact" className="w-fit">
-                <Button
-                    name="¡Cotiza hoy mismo!"
-                    isBeam
-                    containerClass="sm:w-fit w-full sm:min-w-96"
-                />
-            </a>
-        </div>
-    </div>
-</section>
-
+                    </p>
+                </div>
+                <div style={{ height: '4rem' }}></div> {/* Espacio adicional */}
+                <div className="w-full h-full absolute inset-0">
+                    <Canvas className="w-full h-full">
+                        <Suspense fallback={''}>
+                            <PerspectiveCamera makeDefault position={[0, 0, 20]} />
+                            <HeroCamera isMobile={isMobile}>
+                                <Astronauta
+                                    scale={sizes.deskScale}
+                                    position={sizes.deskPosition}
+                                    rotation={[0.3, 0.1, -0.5]}
+                                />
+                            </HeroCamera>
+                            <group>
+                                <Model position={sizes.targetPosition} />
+                                <ReactLogo position={sizes.reactLogoPosition} />
+                                <Rings position={sizes.ringPosition} />
+                                <Cube position={sizes.cubePosition} />
+                            </group>
+                            <ambientLight intensity={1} />
+                            <directionalLight position={[5, 5, 5]} intensity={1} castShadow />
+                            <directionalLight position={[-5, -5, 5]} intensity={0.5} />
+                        </Suspense>
+                    </Canvas>
+                </div>
+                <div className="absolute bottom-7 left-0 right-0 w-full z-10 px-4">
+                    <a href="#contact" className="w-fit">
+                        <Button
+                            name="¡Cotiza hoy mismo!"
+                            isBeam
+                            containerClass="sm:w-fit w-full sm:min-w-96"
+                        />
+                    </a>
+                </div>
+            </div>
+        </section>
     );
 };
 
