@@ -10,10 +10,11 @@ import Services from "./sections/Services";
 import ServiceDetail from "./sections/ServiceDetail";
 import Contact from "./sections/Contact";
 import WhatsAppButton from "./sections/WhatsAppButton"; // Importamos el botón de WhatsApp
+import Team from "./sections/Team"; // Importamos la sección del equipo
 
 const App = () => {
   return (
-    <main className="max-w-none mx-auto">
+    <main className="bg-galaxy bg-cover bg-fixed min-h-screen max-w-none mx-auto text-white">
       {/* Navbar */}
       <Navbar />
 
@@ -42,6 +43,11 @@ const App = () => {
 
               <section id="work">
                 <Projects />
+              </section>
+
+              {/* Sección del equipo, después de Projects */}
+              <section id="team">
+                <Team />
               </section>
             </>
           }
