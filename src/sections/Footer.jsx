@@ -138,7 +138,7 @@ const Footer = () => {
                     href="/trabaja-con-nosotros"
                     className="hover:text-[#FFFFFF] transition font-bold"
                   >
-                    (+57) 322 816 0021
+                    (+57) 322 872 6267
                   </a>
                 </li>
               </div>
