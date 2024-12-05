@@ -9,9 +9,6 @@ export default {
       spacing: {
         'screen': '100vw', // Asegura que las clases `w-screen` ocupen el 100% del ancho de la ventana
       },
-    },
-    
-    extend: {
       fontFamily: {
         generalsans: ['General Sans', 'sans-serif'],
       },
@@ -34,6 +31,7 @@ export default {
       },
       backgroundImage: {
         terminal: "url('/assets/terminal.png')",
+        galaxy: "url('/assets/Galaxia.jpg')", // Agregamos el fondo de galaxia
       },
     },
   },
