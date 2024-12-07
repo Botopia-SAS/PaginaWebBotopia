@@ -4,25 +4,25 @@ const teamMembers = [
   {
     name: 'Isaac Páez Triana',
     title: 'Head of Engineering',
-    description: 'Apasionado por construir experiencias digitales únicas.',
+    description: 'Líder en desarrollo de soluciones digitales innovadoras.',
     photo: "assets/Isaac.svg", // Reemplaza con la URL de la foto
   },
   {
     name: 'Laura Catalina Cifuentes',
     title: 'CEO',
-    description: 'Maestra del rendimiento y la gestión de datos con Node.js.',
+    description: 'Experta en liderazgo y crecimiento estratégico.',
     photo: "assets/Laura.svg", // Reemplaza con la URL de la foto
   },
   {
     name: 'Juan Diego Gama Galvis',
     title: 'Operations Manager',
-    description: 'Diseño de interfaces y experiencia de usuario.',
+    description: 'Optimiza procesos y gestiona operaciones eficientes.',
     photo: "assets/Diego.svg", // Reemplaza con la URL de la foto
   },
   {
     name: 'David Alejandro Espejo Garcia',
     title: 'CTO',
-    description: 'Diseño de interfaces y experiencia de usuario.',
+    description: 'Diseña y lidera la estrategia tecnológica de la empresa.',
     photo: "assets/Espejo.svg", // Reemplaza con la URL de la foto
   },
   {
