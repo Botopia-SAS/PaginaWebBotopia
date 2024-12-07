@@ -10,7 +10,7 @@ const Customers = () => {
         { id: 2, name: 'Customer 2', logo: '/assets/customers/GRUPO-LHOMKA-S.A.S.svg' },
         { id: 3, name: 'Customer 3', logo: '/assets/customers/FreedOM_logo.svg' },
         { id: 4, name: 'Customer 4', logo: '/assets/customers/Grupo-industrial-de-proyectos.svg' },
-        { id: 5, name: 'Customer 5', logo: '/assets/customers/Clicsociable.svg' },
+        { id: 5, name: 'Customer 5', logo: '/assets/customers/Clic.png' },
         // Agrega más clientes según lo necesites
     ];
 
