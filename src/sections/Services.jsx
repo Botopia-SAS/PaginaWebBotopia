@@ -2,9 +2,8 @@ import React, { Suspense, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
-import { Cohete } from "../components/cohete";
 import { useMediaQuery } from "react-responsive";
-
+import { Cohete } from "../components/cohete";
 const Services = () => {
   const [selectedCategory, setSelectedCategory] = useState(
     "Software a la Medida"
