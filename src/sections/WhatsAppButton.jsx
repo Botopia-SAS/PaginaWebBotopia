@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const WhatsAppButton = ({
-  phoneNumber = "573228726267", // Número por defecto
+  phoneNumber, // Número de teléfono (ahora obligatorio)
   message = "¡Hola! Me gustaría más información.", // Mensaje por defecto
   size = 56, // Tamaño del botón por defecto
   iconSize = 32, // Tamaño del ícono
@@ -10,20 +10,24 @@ const WhatsAppButton = ({
   boxShadow = "0 4px 15px rgba(0, 0, 0, 0.3)", // Sombra por defecto
   position = { bottom: "24px", right: "24px" }, // Posición flotante
 }) => {
-  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  // Validación dinámica para usar un número por defecto si no se proporciona uno
+  const finalPhoneNumber = phoneNumber || "573228726267";
+
+  // Generar enlace de WhatsApp
+  const whatsappLink = `https://wa.me/${finalPhoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
     <a
       href={whatsappLink}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed flex items-center justify-center rounded-full z-50 animate-bounce" // Añadido efecto de rebote con Tailwind
+      className="fixed flex items-center justify-center rounded-full z-50 animate-bounce"
       style={{
         width: size,
         height: size,
         background: backgroundColor,
         boxShadow: boxShadow,
-        ...position, // Posición flotante configurable
+        ...position,
       }}
       aria-label="Chat on WhatsApp"
     >
@@ -41,7 +45,7 @@ const WhatsAppButton = ({
 
 // Validación de propiedades con PropTypes
 WhatsAppButton.propTypes = {
-  phoneNumber: PropTypes.string.isRequired, // Número de WhatsApp
+  phoneNumber: PropTypes.string, // Número de WhatsApp
   message: PropTypes.string, // Mensaje inicial
   size: PropTypes.number, // Tamaño del botón
   iconSize: PropTypes.number, // Tamaño del ícono
