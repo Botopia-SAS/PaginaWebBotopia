@@ -247,11 +247,18 @@ export const myProjects = [
     return {
       deskScale: isTablet ? 0.035:isSmall ? 1 :isMobile ? 0.03 : 0.035,
       deskPosition: isMobile ? [-0.8, -4.5, 0] : [-0.8, -5.5, 0],
-      cubePosition: isSmall ? [4, 0, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
+      cubePosition: isSmall ? [20, 0, 0] : isMobile ? [0, 0, 0] : isTablet ? [10, 10, 10] : [10, 10, 10],
       reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [8, 3, 0],
       ringPosition: isSmall ? [10, 10, 10] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 3, 0] : [-17, 5, 0],
-      targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-5, -10, -10] : isTablet ? [-5, -7, -10] : [-8, -13, -10],
-    };
+      targetPosition: isSmall ? [-10, -10, -10] : isMobile ? [-5, -10, -10] : isTablet ? [12, 1, -9] : [15, -13, -10],
+      cohetePosition: isSmall
+      ? [0, 0, -10] // Para pantallas pequeñas
+      : isMobile
+      ? [10, -10, -20] // Para móviles
+      : isTablet
+      ? [10, -10, -20] // Para tabletas
+      : [20, -10, -10], // Por defecto para escritorio
+      };
   };
   
   export const workExperiences = [

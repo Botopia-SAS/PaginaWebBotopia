@@ -3,16 +3,14 @@ import { PerspectiveCamera } from "@react-three/drei";
 import { Suspense } from "react";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from '../constants/index.js';
-import Target from "../components/Target.jsx";
 import ReactLogo from "../components/ReactLogo.jsx";
-import Cube from "../components/Cube.jsx";
 import Rings from "../components/Rings.jsx";
 import HeroCamera from "../components/HeroCamera.jsx";
 import Button from "../components/Button.jsx";
 import { Model } from "../components/mini_robot.jsx";
 import { Astronauta } from "../components/Astronauta.jsx";
 import { Typewriter } from 'react-simple-typewriter';
-
+import { Cohete } from "../components/cohete.jsx";
 const Hero = () => {
     const isSmall = useMediaQuery({ maxWidth: 0 });
     const isMobile = useMediaQuery({ maxWidth: 768 });
@@ -64,7 +62,7 @@ const Hero = () => {
                                 <Model position={sizes.targetPosition} />
                                 <ReactLogo position={sizes.reactLogoPosition} />
                                 <Rings position={sizes.ringPosition} />
-                                <Cube position={sizes.cubePosition} />
+                                
                             </group>
                             <ambientLight intensity={1} />
                             <directionalLight position={[5, 5, 5]} intensity={1} castShadow />
