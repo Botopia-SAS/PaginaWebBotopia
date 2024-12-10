@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
-// import About from "./sections/About";
+import About from "./sections/About";
 import Projects from "./sections/Projects";
 import Footer from "./sections/Footer";
 import Customers from "./sections/Customers";
@@ -52,6 +52,9 @@ const App = () => {
             </>
           }
         />
+
+<Route path="/about" element={<About />} />
+
 
         {/* Ruta dinámica para los detalles del servicio */}
         <Route path="/servicio/:id" element={<ServiceDetail />} />
