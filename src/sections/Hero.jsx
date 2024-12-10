@@ -64,7 +64,6 @@ const Hero = () => {
                                 <Model position={sizes.targetPosition} />
                                 <ReactLogo position={sizes.reactLogoPosition} />
                                 <Rings position={sizes.ringPosition} />
-                                <Cube position={sizes.cubePosition} />
                             </group>
                             <ambientLight intensity={1} />
                             <directionalLight position={[5, 5, 5]} intensity={1} castShadow />

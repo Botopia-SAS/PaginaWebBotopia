@@ -250,7 +250,7 @@ export const myProjects = [
       cubePosition: isSmall ? [4, 0, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
       reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [8, 3, 0],
       ringPosition: isSmall ? [10, 10, 10] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 3, 0] : [-17, 5, 0],
-      targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-5, -10, -10] : isTablet ? [-5, -7, -10] : [-8, -13, -10],
+      targetPosition: isSmall ? [-10, -10, -10] : isMobile ? [-5, -10, -10] : isTablet ? [12, 1, -9] : [15, -13, -10],
     };
   };
   
