@@ -104,6 +104,7 @@ export const myProjects = [
     subdesc:
       'Este proyecto automatizó la planta de retrolavado en Coca-Cola FEMSA mediante PLCs, optimizando el proceso y mejorando la eficiencia. También se desarrolló una interfaz HMI personalizada para facilitar el monitoreo y control en tiempo real.',
     texture: '/textures/project/Coca.mp4',
+    model: 'iphone',
     logo: './assets/customers/Coca-Cola_logo.svg',
     logoStyle: {
       backgroundColor: '#2A1816',
@@ -134,7 +135,8 @@ export const myProjects = [
     desc: 'Vohgo - Plataforma de Compra Rápida de Componentes Eléctricos.',
     subdesc:
       'Vohgo es una aplicación para Android y iOS que facilita la compra rápida y conveniente de componentes eléctricos. Con una interfaz intuitiva y entregas en tiempo récord, ofrece a los usuarios una solución confiable para acceder a piezas de calidad en cualquier momento.',
-    texture: '/textures/project/Vohgo.mp4',
+    texture: '/textures/project/Vo.mp4',
+    model: 'iphone',
     logo: '/assets/Voh.png',
     logoStyle: {
       backgroundColor: '#13202F',
@@ -171,6 +173,7 @@ export const myProjects = [
     subdesc:
       'Este proyecto comprende el diseño en SolidWorks de una máquina dispensadora de jabones líquidos y en espuma, enfocada en la durabilidad y facilidad de recarga para uso intensivo. La simulación permite evaluar la resistencia estructural y la eficiencia de sus mecanismos, ofreciendo un equipo confiable y práctico para ambientes de alto tráfico.',
     texture: '/textures/project/Solid.mp4',
+    model: 'pc',
     logo: '/assets/customers/GRUPO-LHOMKA-S.A.S.svg',
     logoStyle: {
       backgroundColor: '#000000',
@@ -209,6 +212,7 @@ export const myProjects = [
       'FreedOM es una app que tiene como misión transformar la vida financiera de las personas generando un impacto mental y emociona por medio de la centralización, organización y administración de toda la información financiera de una persona en un solo lugar',
     href: 'https://banking-iota-nine.vercel.app/sign-in',
     texture: '/textures/project/Coinlym.mp4',
+    model: 'pc',
     logo: '/assets/customers/freedom_solo_logo.svg',
     logoStyle: {
       backgroundColor: '#000000',

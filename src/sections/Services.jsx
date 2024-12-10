@@ -11,7 +11,7 @@ const Services = () => {
 
   // Detectar tamaños de pantalla
   const isSmallScreen = useMediaQuery({ maxWidth: 500 }); // Pantallas pequeñas
-  const isMediumScreen = useMediaQuery({ minWidth: 769, maxWidth: 1024 }); // Tablets
+  const isMediumScreen = useMediaQuery({ minWidth: 501, maxWidth: 1024 }); // Tablets
   const isLargeScreen = useMediaQuery({ minWidth: 1025 }); // Escritorio
 
   // Configurar tamaño y posición dinámicamente
