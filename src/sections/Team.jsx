@@ -8,19 +8,19 @@ const teamMembers = [
     photo: "assets/Isaac.svg", // Reemplaza con la URL de la foto
   },
   {
-    name: 'Laura Catalina Cifuentes',
+    name: 'Laura Cifuentes Barrero',
     title: 'CEO',
     description: 'Experta en liderazgo y crecimiento estratégico.',
     photo: "assets/Laura.svg", // Reemplaza con la URL de la foto
   },
   {
-    name: 'Juan Diego Gama Galvis',
+    name: 'Juan Gama Galvis',
     title: 'Operations Manager',
     description: 'Optimiza procesos y gestiona operaciones eficientes.',
     photo: "assets/Diego.svg", // Reemplaza con la URL de la foto
   },
   {
-    name: 'David Alejandro Espejo Garcia',
+    name: 'David Espejo Garcia',
     title: 'CTO',
     description: 'Diseña y lidera la estrategia tecnológica de la empresa.',
     photo: "assets/Espejo.svg", // Reemplaza con la URL de la foto
