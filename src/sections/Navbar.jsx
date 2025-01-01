@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { navLinks } from "../constants/index.js";
 import { Link, NavLink } from "react-router-dom";
+import { translatePageAutomatically } from "../utils/translatePageAutomatically";
 
 const NavItems = ({ handleScroll }) => {
   return (
@@ -9,7 +10,9 @@ const NavItems = ({ handleScroll }) => {
         <li
           key={id}
           className={`nav-li relative ${
-            id === "contact" ? "bg-[#9165f3] px-4 py-2 rounded-lg text-white" : ""
+            id === "contact"
+              ? "bg-[#9165f3] px-4 py-2 rounded-lg text-white"
+              : ""
           }`}
         >
           {id === "about" ? (
@@ -45,8 +48,16 @@ const NavItems = ({ handleScroll }) => {
 };
 
 const Navbar = () => {
+  const [language, setLanguage] = useState("en"); // Idioma actual
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleLanguage = async () => {
+    const newLanguage = language === "en" ? "es" : "en";
+    setLanguage(newLanguage);
+
+    // Llama a la función de traducción automática
+    await translatePageAutomatically(newLanguage);
+  };
   const toggleMenu = () => setIsOpen((prevIsOpen) => !prevIsOpen);
 
   // Función para manejar el desplazamiento suave (ajustable con offset)
@@ -87,6 +98,9 @@ const Navbar = () => {
               alt="toggle"
               className="w-6 h-6"
             />
+          </button>
+          <button onClick={toggleLanguage} className="language-toggle">
+            {language === "en" ? "Español" : "English"}
           </button>
 
           <nav className="sm:flex hidden">

@@ -1,7 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-})
+  resolve: {
+    alias: {
+      '@services': '/src/services', // Alias para la carpeta de servicios
+      '@components': '/src/components', // Puedes agregar otros alias si los necesitas
+    },
+  },
+});
